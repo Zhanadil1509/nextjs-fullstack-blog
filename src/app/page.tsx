@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <main className={classes.main}>
       <div className={classes.textContainer}>
-        <h1>Creative Thoughts Agency.</h1>
-        <p>
+        <h1 className={classes.title}>Creative Thoughts Agency.</h1>
+        <p className={classes.desc}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
           eaque, eos praesentium sapiente similique voluptate?
         </p>
