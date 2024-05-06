@@ -19,4 +19,5 @@
 }
 
 .initial {
+  background-color: var(--bg);
 }
