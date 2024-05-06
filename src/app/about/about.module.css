@@ -1,0 +1,10 @@
+.about {
+    display: flex;
+    align-items: center;
+}
+
+.imageContainer {
+    position: relative;
+    height: 40vh;
+    width: 40vw;
+}
