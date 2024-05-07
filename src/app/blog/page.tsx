@@ -1,13 +1,21 @@
 import classes from "./blog.module.css";
 import PostCard from "@/components/postCard/PostCard";
+import { getPosts } from "@/lib/data";
+import { PostType } from "@/shared/types/common";
 
 type Props = {};
-export default function BlogPage({}: Props) {
+const BlogPage = async ({}: Props) => {
+  const posts = await getPosts();
+
   return (
     <div className={classes.blogPage}>
-      <div className={classes.post}>
-        <PostCard />
-      </div>
+      {posts?.map((post: PostType) => (
+        <div key={post.userId} className={classes.post}>
+          <PostCard post={post} />
+        </div>
+      ))}
     </div>
   );
-}
+};
+
+export default BlogPage;
