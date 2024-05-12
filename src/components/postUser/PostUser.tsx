@@ -10,7 +10,7 @@ const PostUser = async ({ userId = "Who is?" }: Props) => {
 
   return (
     <div className={classes.postUser}>
-      <Image src={user?.img} alt="" fill className={classes.avatar} />
+      <Image src={user?.img} alt="" className={classes.avatar} />
       <div className={classes.texts}>
         <span className={classes.title}>Author</span>
         <span className={classes.username}>{user?.username}</span>
