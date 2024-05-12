@@ -1,6 +1,6 @@
 import * as mongoose from "mongoose";
 
-const connection = { isConnected: null };
+let connection = { isConnected: null };
 
 export const connectToDb = async () => {
   try {
@@ -9,6 +9,7 @@ export const connectToDb = async () => {
       return;
     }
     const db = await mongoose.connect(process.env.MONGODB as string);
+    // @ts-ignore
     connection.isConnected = db?.connection[0].readyState;
   } catch (err) {
     console.log(err);
